@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import { translateNumbers } from '../utils/translation.js';
+import { translateNumbers } from '../utils/translation';
 
 export default {
   name: 'Counter',
