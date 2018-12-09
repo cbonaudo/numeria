@@ -16,4 +16,8 @@ describe('Counter.vue', () => {
   it('should render 0 0 0 1 as starting counter', () => {
     expect(vm.$el.querySelector('.counter').textContent).toEqual('0 0 0 1 ');
   });
+
+  it('should match snapshot', () => {
+    expect(vm.$el).toMatchSnapshot();
+  });
 });

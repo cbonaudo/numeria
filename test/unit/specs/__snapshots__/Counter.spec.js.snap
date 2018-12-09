@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Counter.vue should match snapshot 1`] = `
+<div
+  class="hello"
+>
+  <div
+    class="counter_sidebar"
+  >
+    <button>
+      Reset
+    </button>
+    <br />
+    <button>
+      Random Number
+    </button>
+    <br />
+    <button>
+      Change Color
+    </button>
+  </div>
+   
+  <h1>
+    Counter
+  </h1>
+   
+  <div>
+    <p
+      class="translatedNumber"
+    >
+      Un
+    </p>
+  </div>
+   
+  <div>
+    <span>
+      <button>
+        
+        ^
+      
+      </button>
+      <button>
+        
+        ^
+      
+      </button>
+      <button>
+        
+        ^
+      
+      </button>
+      <button>
+        
+        ^
+      
+      </button>
+    </span>
+  </div>
+   
+  <div
+    class="counter"
+  >
+    <span>
+      0 
+    </span>
+    <span>
+      0 
+    </span>
+    <span>
+      0 
+    </span>
+    <span>
+      1 
+    </span>
+  </div>
+   
+  <div>
+    <span>
+      <button>
+        
+        v
+      
+      </button>
+      <button>
+        
+        v
+      
+      </button>
+      <button>
+        
+        v
+      
+      </button>
+      <button>
+        
+        v
+      
+      </button>
+    </span>
+  </div>
+</div>
+`;
