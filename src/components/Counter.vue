@@ -5,7 +5,7 @@
     </div>
     <h1>Counter</h1>
     <div>
-      <p>{{ translatedNumber }}</p>
+      <p class="translatedNumber">{{ translatedNumber }}</p>
     </div>
     <div>
       <span>
@@ -14,7 +14,7 @@
         </button>
       </span>
     </div>
-    <div>
+    <div class="counter">
       <span v-for="(figure, index) in figures" :key="index">{{ figure }} </span>
     </div>
     <div>
