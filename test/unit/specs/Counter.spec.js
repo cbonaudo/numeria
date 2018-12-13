@@ -67,12 +67,4 @@ describe('Counter.vue', () => {
     vm.decrement(0);
     expect(vm.$data.translatedNumber).toEqual('Zero');
   });
-
-  // translateNumbers() for figures[0,0,0,2] must return 'Deux'
-
-  // translateNumbers() for figures[0,6,7,2] must return 'Six Cent Soixante-Douze'
-
-  // translateNumbers() for figures[1,0,0,7] must return 'Mille Sept'
-
-  // translateNumbers() for figures[2,3,0,0] must return 'Deux Mille Trois Cent'
 });
