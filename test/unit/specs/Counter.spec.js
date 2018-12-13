@@ -38,13 +38,15 @@ describe('Counter.vue', () => {
     expect(vm.$data.figures[0]).toEqual(1);
   });
 
-  it('should translate after incrementing first figure', () => {
+  it('should translate after incrementing a figure twice', () => {
+    vm.increment(0);
     vm.increment(0);
     expect(vm.$data.translatedNumber).toEqual('Mille Un');
   });
 
-  it('should translate after incrementing fourth figure', () => {
+  it('should translate after incrementing two figures', () => {
     vm.increment(3);
+    vm.increment(0);
     expect(vm.$data.translatedNumber).toEqual('Deux');
   });
 
@@ -54,13 +56,15 @@ describe('Counter.vue', () => {
     expect(vm.$data.figures[0]).toEqual(9);
   });
 
-  it('should translate after decrementing first figure', () => {
+  it('should translate after decrementing a figure twice', () => {
+    vm.decrement(0);
     vm.decrement(0);
     expect(vm.$data.translatedNumber).toEqual('Neuf Mille Un');
   });
 
-  it('should translate after decrementing fourth figure', () => {
+  it('should translate after decrementing two figures', () => {
     vm.decrement(3);
+    vm.decrement(0);
     expect(vm.$data.translatedNumber).toEqual('Zero');
   });
 
