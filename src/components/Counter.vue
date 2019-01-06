@@ -5,16 +5,13 @@
     </div>
     <h1>Counter</h1>
     <div>
-      <p>{{ translatedNumber }}</p>
-    </div>
-    <div>
       <span>
         <button v-for="(figure, index) in figures" :key="index" v-on:click="increment(index);">
           ^
         </button>
       </span>
     </div>
-    <div>
+    <div class="counter">
       <span v-for="(figure, index) in figures" :key="index">{{ figure }} </span>
     </div>
     <div>
@@ -24,11 +21,14 @@
         </button>
       </span>
     </div>
+    <div>
+      <p class="translatedNumber">{{ translatedNumber }}</p>
+    </div>
   </div>
 </template>
 
 <script>
-import { translateNumbers } from '../utils/translation';
+import { translateNumber } from '../utils/translation';
 
 export default {
   name: 'Counter',
@@ -36,13 +36,27 @@ export default {
     return {
       figures: [0, 0, 0, 1],
       translatedNumber: 'Un',
+      // Increment or go back to 0 if figure is already at 9
       increment(index) {
-        this.figures.splice(index, 1, this.figures[index] + 1);
-        this.translatedNumber = translateNumbers(this.figures);
+        let incremented = this.figures[index];
+        if (this.figures[index] === 9) {
+          incremented = 0;
+        } else {
+          incremented += 1;
+        }
+        this.figures.splice(index, 1, incremented);
+        this.translatedNumber = translateNumber(this.figures);
       },
+      // Decrement or go back to 9 if figure is already at 0
       decrement(index) {
-        this.figures.splice(index, 1, this.figures[index] - 1);
-        this.translatedNumber = translateNumbers(this.figures);
+        let decremented = this.figures[index];
+        if (this.figures[index] === 0) {
+          decremented = 9;
+        } else {
+          decremented -= 1;
+        }
+        this.figures.splice(index, 1, decremented);
+        this.translatedNumber = translateNumber(this.figures);
       },
     };
   },
