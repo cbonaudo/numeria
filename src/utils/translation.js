@@ -159,8 +159,10 @@ function NumberToLetter( nombre ){
 						if(  quotient > 1 && reste != 0   ) numberToLetter = NumberToLetter(quotient) + " billions " + NumberToLetter(reste);
 					    break; 	
      }
-     
-	 if(  numberToLetter.substr(numberToLetter.length-"quatre-vingt".length,"quatre-vingt".length) == "quatre-vingt"  ) numberToLetter = numberToLetter + "s";
+	 
+	 // Exceptions
+	 if( numberToLetter.substr(numberToLetter.length-"quatre-vingt".length,"quatre-vingt".length) == "quatre-vingt"  ) numberToLetter = numberToLetter + "s";
+	 numberToLetter = numberToLetter.replace("quatre-vingt-et-un", "quatre-vingt-un");
 	 
 	 return numberToLetter;
 }
