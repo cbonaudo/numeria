@@ -41,13 +41,13 @@ describe('Counter.vue', () => {
   it('should translate after incrementing a figure twice', () => {
     vm.increment(0);
     vm.increment(0);
-    expect(vm.$data.translatedNumber).toEqual('Mille Un');
+    expect(vm.$data.translatedNumber).toEqual('Deux mille un');
   });
 
   it('should translate after incrementing two figures', () => {
     vm.increment(3);
     vm.increment(0);
-    expect(vm.$data.translatedNumber).toEqual('Deux');
+    expect(vm.$data.translatedNumber).toEqual('Mille deux');
   });
 
   // Decrement Function
@@ -59,12 +59,12 @@ describe('Counter.vue', () => {
   it('should translate after decrementing a figure twice', () => {
     vm.decrement(0);
     vm.decrement(0);
-    expect(vm.$data.translatedNumber).toEqual('Neuf Mille Un');
+    expect(vm.$data.translatedNumber).toEqual('Huit mille un');
   });
 
   it('should translate after decrementing two figures', () => {
     vm.decrement(3);
     vm.decrement(0);
-    expect(vm.$data.translatedNumber).toEqual('Zero');
+    expect(vm.$data.translatedNumber).toEqual('Neuf mille');
   });
 });

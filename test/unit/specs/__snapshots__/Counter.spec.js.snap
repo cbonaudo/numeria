@@ -25,14 +25,6 @@ exports[`Counter.vue should match snapshot 1`] = `
   </h1>
    
   <div>
-    <p
-      class="translatedNumber"
-    >
-      Un
-    </p>
-  </div>
-   
-  <div>
     <span>
       <button>
         
@@ -97,6 +89,14 @@ exports[`Counter.vue should match snapshot 1`] = `
       
       </button>
     </span>
+  </div>
+   
+  <div>
+    <p
+      class="translatedNumber"
+    >
+      Un
+    </p>
   </div>
 </div>
 `;
