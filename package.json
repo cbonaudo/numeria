@@ -5,8 +5,8 @@
   "author": "cbonaudo <cbonaudo@hotmail.fr>",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "npm run dev",
+    "start:dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "start": "npm run start:dev",
     "unit": "jest --config test/unit/jest.conf.js --coverage",
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src test/unit",

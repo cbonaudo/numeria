@@ -1,6 +1,6 @@
 <template>
-  <div class="hello">
-    <div class="counter_sidebar">
+  <div class="">
+    <div class="sidebar">
       <button>Reset</button><br /><button>Random Number</button><br /><button>Change Color</button>
     </div>
     <h1>Counter</h1>
@@ -11,9 +11,11 @@
         </button>
       </span>
     </div>
+
     <div class="counter">
       <span v-for="(figure, index) in figures" :key="index">{{ figure }} </span>
     </div>
+
     <div>
       <span>
         <button v-for="(figure, index) in figures" :key="index" v-on:click="decrement(index);">
@@ -64,10 +66,4 @@ export default {
 </script>
 
 <style scoped>
-.counter_sidebar {
-  background-color: green;
-  padding: 10px;
-  height: 200px;
-  position: absolute;
-}
 </style>

@@ -2,7 +2,10 @@
   <div class="app">
     <div class="header">
       <p>
-        Numeria <button>Counter</button><button>Find the number</button><button>Settings</button>
+        Numeria
+        <router-link to="/">Counter</router-link>
+        <router-link to="/find-number">Find the number</router-link>
+        <button>Settings</button>
       </p>
     </div>
     <div id="app"><router-view /></div>
@@ -30,5 +33,11 @@ export default {
 }
 .header * {
   margin-left: 100px;
+}
+.sidebar {
+  background-color: green;
+  padding: 10px;
+  height: 200px;
+  position: absolute;
 }
 </style>
