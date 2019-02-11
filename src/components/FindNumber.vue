@@ -1,7 +1,9 @@
 <template>
-  <div class="">
+  <div class>
     <div class="sidebar">
-      <button>Give me a Hint</button><br /><button>Try another</button>
+      <button>Give me a Hint</button>
+      <br>
+      <button>Try another</button>
     </div>
     <div class="counter">
       <span v-for="(figure, index) in figures" :key="index">{{ figure }}</span>
@@ -24,5 +26,4 @@ export default {
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

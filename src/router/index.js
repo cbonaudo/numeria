@@ -16,4 +16,5 @@ export default new Router({
       component: Counter,
     },
   ],
+  mode: 'history',
 });
