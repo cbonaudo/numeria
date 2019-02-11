@@ -1,28 +1,34 @@
 <template>
-  <div class="hello">
-    <div class="counter_sidebar">
-      <button>Reset</button><br /><button>Random Number</button><br /><button>Change Color</button>
-    </div>
-    <h1>Counter</h1>
-    <div>
-      <span>
-        <button v-for="(figure, index) in figures" :key="index" v-on:click="increment(index);">
-          ^
-        </button>
-      </span>
-    </div>
-    <div class="counter">
-      <span v-for="(figure, index) in figures" :key="index">{{ figure }} </span>
+  <div class="grid-sidebar">
+    <div class="sidebar">
+      <button>Reset</button>
+      <br>
+      <button>Random Number</button>
+      <br>
+      <button>Change Color</button>
     </div>
     <div>
-      <span>
-        <button v-for="(figure, index) in figures" :key="index" v-on:click="decrement(index);">
-          v
-        </button>
-      </span>
-    </div>
-    <div>
-      <p class="translatedNumber">{{ translatedNumber }}</p>
+      <h1>Counter</h1>
+      <div>
+        <span>
+          <button v-for="(figure, index) in figures" :key="index" v-on:click="increment(index)">^</button>
+        </span>
+      </div>
+
+      <div class="counter">
+        <div v-for="(figure, index) in figures" :key="index" class="figure">
+          <img :src="getIcon(figure)">
+        </div>
+      </div>
+
+      <div>
+        <span>
+          <button v-for="(figure, index) in figures" :key="index" v-on:click="decrement(index)">v</button>
+        </span>
+      </div>
+      <div>
+        <p class="translatedNumber">{{ translatedNumber }}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -32,6 +38,12 @@ import { translateNumber } from '../utils/translation';
 
 export default {
   name: 'Counter',
+  methods: {
+    getIcon(nb) {
+      const images = require.context('../assets/');
+      return images(`./card_${nb}.svg`);
+    },
+  },
   data() {
     return {
       figures: [0, 0, 0, 1],
@@ -64,10 +76,4 @@ export default {
 </script>
 
 <style scoped>
-.counter_sidebar {
-  background-color: green;
-  padding: 10px;
-  height: 200px;
-  position: absolute;
-}
 </style>
