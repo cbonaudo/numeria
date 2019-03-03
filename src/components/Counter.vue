@@ -1,53 +1,51 @@
 <template>
-  <div class="grid-sidebar">
-    <div class="sidebar">
-      <button>Reset</button>
-      <br>
-      <button>Random Number</button>
-      <br>
-      <button>Change Color</button>
-    </div>
-    <div>
+  <div>
+    <div class="title">
       <h1>Counter</h1>
-      <div>
-        <span>
-          <button v-for="(figure, index) in figures" :key="index" v-on:click="increment(index)">^</button>
-        </span>
-      </div>
+      <p>Fais défiler les nombres avec le compteur pour voir leur écriture en lettres.</p>
+    </div>
+    <div class="grid-counter">
+      <div v-for="(figure, index) in figures" :key="index">
+        <div>
+          <span>
+            <img v-on:click="increment(index)" src="../assets/arrow_up.svg" class="arrow">
+          </span>
+        </div>
 
-      <div class="counter">
-        <div v-for="(figure, index) in figures" :key="index" class="figure">
-          <img :src="getIcon(figure)">
+        <div class="counter">
+          <div class="figure">
+            <img :src="getCard(figure)" class="card">
+          </div>
+        </div>
+
+        <div>
+          <span>
+            <img v-on:click="decrement(index)" src="../assets/arrow_down.svg" class="arrow">
+          </span>
         </div>
       </div>
-
-      <div>
-        <span>
-          <button v-for="(figure, index) in figures" :key="index" v-on:click="decrement(index)">v</button>
-        </span>
-      </div>
-      <div>
-        <p class="translatedNumber">{{ translatedNumber }}</p>
-      </div>
+    </div>
+    <div class="translated-container">
+      <p class="translated-number">{{ translatedNumber }}</p>
     </div>
   </div>
 </template>
 
 <script>
-import { translateNumber } from '../utils/translation';
+import { translateNumber } from "../utils/translation";
 
 export default {
-  name: 'Counter',
+  name: "Counter",
   methods: {
-    getIcon(nb) {
-      const images = require.context('../assets/');
+    getCard(nb) {
+      const images = require.context("../assets/");
       return images(`./card_${nb}.svg`);
-    },
+    }
   },
   data() {
     return {
       figures: [0, 0, 0, 1],
-      translatedNumber: 'Un',
+      translatedNumber: "Un",
       // Increment or go back to 0 if figure is already at 9
       increment(index) {
         let incremented = this.figures[index];
@@ -69,9 +67,9 @@ export default {
         }
         this.figures.splice(index, 1, decremented);
         this.translatedNumber = translateNumber(this.figures);
-      },
+      }
     };
-  },
+  }
 };
 </script>
 
