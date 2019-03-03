@@ -14,14 +14,14 @@
 
 <script>
 export default {
-  name: 'App',
+  name: "App"
 };
 </script>
 
 <style>
 body {
   margin: 0;
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: "Bookman Old Style Regular", arial;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -36,26 +36,37 @@ body {
   background-color: grey;
 }
 
-.grid-sidebar {
+.title {
+  margin-left: 100px;
   display: grid;
-  grid-template-columns: 10% auto;
-}
-.sidebar {
-  background-color: grey;
-  padding: 10px;
-  float: left;
+  grid-template-rows: 50% 50%;
+  text-align: left;
 }
 
-.counter {
-  width: max-content;
+.grid-counter {
+  width: 700px;
   margin: auto;
+  margin-top: 50px;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
 }
-.figure {
-  margin: 2% !important;
+
+.translated-container {
+  font-size: 2em;
+  height: 220px;
+  line-height: 110px;
+  width: 750px;
+  margin: auto;
+  margin-top: 50px;
+  background-size: contain;
+  background-image: url("assets/answer_background.svg");
+  background-repeat: no-repeat;
 }
-img {
-  height: 300px;
+
+.card {
+  height: 250px;
+}
+.arrow {
+  height: 25px;
 }
 </style>
