@@ -2,7 +2,7 @@
   <div class>
     <div class="title">
       <h1>Trouve le nombre</h1>
-      <p>Ecris en toute lettres le nombre affiché à l'écran.</p>
+      <p>Ecris en toutes lettres le nombre affiché à l'écran.</p>
     </div>
     <div class="grid-counter">
       <img v-for="(figure, index) in figures" :key="index" :src="getCard(figure)" class="card">
