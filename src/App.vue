@@ -1,10 +1,13 @@
 <template>
   <div class="app">
     <div class="header">
-      <p>Numeria</p>
-      <router-link to="/">Counter</router-link>
-      <router-link to="/find-number">Find the number</router-link>
-      <button>Settings</button>
+      <img src="./assets/numeria_logo.svg" class="logo">
+      <router-link to="/">
+        <img src="./assets/button_counter_FR.svg">
+      </router-link>
+      <router-link to="/find-number">
+        <img src="./assets/button_findnumber_FR.svg">
+      </router-link>
     </div>
     <div id="app">
       <router-view/>
@@ -26,18 +29,28 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   height: 100%;
+  background-color: rgba(229, 223, 222, 0.2);
 }
 
 .header {
   display: grid;
-  grid-template-columns: 30% 25% 25% 25%;
-  align-items: center;
-  padding: 10px;
-  background-color: grey;
+  grid-template-columns: 33% 33% 33%;
+  width: 800px;
+  align-content: center;
+  padding: 0;
+}
+.header img:not(.logo) {
+  height: 60px;
+}
+.logo {
+  margin-top: 20px;
+  margin-left: 40px;
+  height: 40px;
 }
 
 .title {
-  margin-left: 100px;
+  margin-top: 20px;
+  margin-left: 150px;
   display: grid;
   grid-template-rows: 50% 50%;
   text-align: left;
@@ -46,15 +59,16 @@ body {
 .grid-counter {
   width: 700px;
   margin: auto;
-  margin-top: 50px;
+  margin-top: 30px;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
 }
 
 .translated-container {
   font-size: 2em;
-  height: 220px;
-  line-height: 110px;
+  font-weight: bold;
+  height: 113px;
+  line-height: 113px;
   width: 750px;
   margin: auto;
   margin-top: 50px;

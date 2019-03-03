@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="title">
-      <h1>Counter</h1>
+      <h1>Compteur</h1>
       <p>Fais défiler les nombres avec le compteur pour voir leur écriture en lettres.</p>
     </div>
     <div class="grid-counter">
