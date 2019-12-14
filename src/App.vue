@@ -1,16 +1,16 @@
 <template>
   <div class="app">
     <div class="header">
-      <img src="./assets/numeria_logo.svg" class="logo">
+      <img src="./assets/numeria_logo.svg" class="logo" />
       <router-link to="/">
-        <img src="./assets/button_counter_FR.svg">
+        <img src="./assets/button_counter_FR.svg" />
       </router-link>
       <router-link to="/find-number">
-        <img src="./assets/button_findnumber_FR.svg">
+        <img src="./assets/button_findnumber_FR.svg" />
       </router-link>
     </div>
     <div id="app">
-      <router-view/>
+      <router-view />
     </div>
   </div>
 </template>
@@ -82,5 +82,14 @@ body {
 }
 .arrow {
   height: 25px;
+}
+
+.n-button {
+  background-color: rgb(229, 222, 221);
+  border: 2px rgb(143, 30, 28) solid;
+  border-radius: 5px;
+  padding: 5px 20px;
+  font-size: 1.1em;
+  cursor: pointer;
 }
 </style>
