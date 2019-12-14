@@ -36,7 +36,10 @@ export default {
     },
     validate() {
       if (this.answer) {
-        if (this.answer === translateNumber(this.figures)) {
+        if (
+          this.answer.toLowerCase() ===
+          translateNumber(this.figures).toLowerCase()
+        ) {
           this.correctAnswer = true;
           this.wrongAnswer = false;
         } else {
